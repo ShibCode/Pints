@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.montserrat {
+  font-family: Montserrat;
+}
+
+.poppins {
+  font-family: Poppins;
+}
+
+.heading {
+  color: #260b49;
+}
+
+.para {
+  color: #3c354e;
+}
