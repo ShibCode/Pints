@@ -72,9 +72,10 @@ export default function HomeIndex() {
             <div className="home-content">
               <div className="home-content-left">
                 <h1 className="home-heading heading poppins">
-                  <AnimatePresence key={letter} exitBeforeEnter>
+                  <AnimatePresence exitBeforeEnter>
                     {letter === "first" && (
                       <motion.span
+                        key={letter}
                         initial="initialFade"
                         animate="animateFade"
                         exit="exitFade"
@@ -85,6 +86,7 @@ export default function HomeIndex() {
                     )}
                     {letter === "second" && (
                       <motion.span
+                        key={letter}
                         initial="initialFade"
                         animate="animateFade"
                         exit="exitFade"
@@ -95,6 +97,7 @@ export default function HomeIndex() {
                     )}
                     {letter === "third" && (
                       <motion.span
+                        key={letter}
                         initial="initialFade"
                         animate="animateFade"
                         exit="exitFade"
