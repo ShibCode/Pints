@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
@@ -19,14 +19,15 @@ import ThankYou from "../../Components/ThankYou/ThankYou";
 
 export default function HomeIndex() {
   const [showThankYou, setShowThankYou] = useState(false);
-  const [letter, setLetter] = useState("third");
+  const [letter, setLetter] = useState("first");
+
   useEffect(() => {
-    // setTimeout(() => {
-    //   setLetter("second");
-    // }, 5000);
-    // setTimeout(() => {
-    //   setLetter("third");
-    // }, 10000);
+    setTimeout(() => {
+      setLetter("second");
+    }, 5000);
+    setTimeout(() => {
+      setLetter("third");
+    }, 10000);
   }, []);
 
   useEffect(() => {
@@ -178,13 +179,13 @@ export default function HomeIndex() {
                     ""
                   )}
                   {letter === "third" ? (
-                    <div className="page-3">
-                      <motion.div
-                        // variants={firstVariants}
-                        // animate="animateImg"
-                        // initial="initialImg"
-                        className="main-slider"
-                      >
+                    <motion.div
+                      className="page-3"
+                      variants={firstVariants}
+                      animate="animateFade"
+                      initial="initialFade"
+                    >
+                      <div className="main-slider">
                         <Splide
                           options={{
                             rewind: true,
@@ -193,7 +194,9 @@ export default function HomeIndex() {
                             perPage: 1,
                             type: "fade",
                             width: "100%",
-                            height: "100%",
+                            autoplay: "play",
+                            interval: 5000,
+                            drag: false,
                           }}
                           className="main-slider2"
                         >
@@ -225,18 +228,20 @@ export default function HomeIndex() {
                             </div>
                           </SplideSlide>
                         </Splide>
-                      </motion.div>
+                      </div>
                       <div className="bg-slider">
                         <Splide
                           options={{
-                            rewind: true,
-                            height: "400px",
+                            autoplay: "play",
+                            interval: 5000,
+                            height: "450px",
                             direction: "ttb",
                             arrows: false,
                             pagination: false,
                             perPage: 2,
+                            perMove: 1,
                             gap: "20px",
-                            drag: true,
+                            drag: false,
                             type: "loop",
                           }}
                           className="thumb-slider"
@@ -258,7 +263,7 @@ export default function HomeIndex() {
                           </SplideSlide>
                         </Splide>
                       </div>
-                    </div>
+                    </motion.div>
                   ) : (
                     ""
                   )}
