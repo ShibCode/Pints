@@ -19,15 +19,15 @@ import ThankYou from "../../Components/ThankYou/ThankYou";
 
 export default function HomeIndex() {
   const [showThankYou, setShowThankYou] = useState(false);
-  const [letter, setLetter] = useState("third");
+  const [letter, setLetter] = useState("first");
 
   useEffect(() => {
-    // setTimeout(() => {
-    //   setLetter("second");
-    // }, 5000);
-    // setTimeout(() => {
-    //   setLetter("third");
-    // }, 10000);
+    setTimeout(() => {
+      setLetter("second");
+    }, 5000);
+    setTimeout(() => {
+      setLetter("third");
+    }, 10000);
   }, []);
 
   useEffect(() => {
@@ -197,6 +197,11 @@ export default function HomeIndex() {
                             autoplay: "play",
                             interval: 5000,
                             drag: false,
+                            breakpoints: {
+                              600: {
+                                drag: true,
+                              },
+                            },
                           }}
                           className="main-slider2"
                         >
