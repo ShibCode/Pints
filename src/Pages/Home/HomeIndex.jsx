@@ -1,26 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 import "./HomeIndex.css";
 import shoppingBg from "../../Assets/shopping-bg.png";
 import bag from "../../Assets/shopping-bag.png";
 import coffeegBg from "../../Assets/coffee-bg.png";
 import cup from "../../Assets/cup.png";
-import mobileBg from "../../Assets/mobile-bg.png";
+import mobileBg1 from "../../Assets/mobile-bg.png";
+import mobileBg2 from "../../Assets/mobile-bg2.png";
+import mobileBg3 from "../../Assets/mobile-bg3.png";
+import thumb1 from "../../Assets/thumb1.png";
+import thumb2 from "../../Assets/thumb2.png";
 // import bag from "../../Assets/shopping-bag.png";
 import Features from "../../Components/Features/Features";
 import ThankYou from "../../Components/ThankYou/ThankYou";
 
 export default function HomeIndex() {
   const [showThankYou, setShowThankYou] = useState(false);
-  const [letter, setLetter] = useState("first");
+  const [letter, setLetter] = useState("third");
   useEffect(() => {
-    setTimeout(() => {
-      setLetter("second");
-    }, 5000);
-    setTimeout(() => {
-      setLetter("third");
-    }, 10000);
+    // setTimeout(() => {
+    //   setLetter("second");
+    // }, 5000);
+    // setTimeout(() => {
+    //   setLetter("third");
+    // }, 10000);
   }, []);
 
   useEffect(() => {
@@ -173,15 +179,85 @@ export default function HomeIndex() {
                   )}
                   {letter === "third" ? (
                     <div className="page-3">
-                      <motion.img
-                        variants={firstVariants}
-                        animate="animateImg"
-                        initial="initialImg"
-                        alt="..."
-                        src={mobileBg}
-                        className="mobile-bg"
-                      />
-                      {/* <img alt="..." src={bag} className="bag" /> */}
+                      <motion.div
+                        // variants={firstVariants}
+                        // animate="animateImg"
+                        // initial="initialImg"
+                        className="main-slider"
+                      >
+                        <Splide
+                          options={{
+                            rewind: true,
+                            arrows: false,
+                            pagination: false,
+                            perPage: 1,
+                            type: "fade",
+                            width: "100%",
+                            height: "100%",
+                          }}
+                          className="main-slider2"
+                        >
+                          <SplideSlide>
+                            <div className="img-wrapper2">
+                              <img
+                                src={mobileBg1}
+                                alt=""
+                                className="slider-img"
+                              />
+                            </div>
+                          </SplideSlide>
+                          <SplideSlide>
+                            <div className="img-wrapper2">
+                              <img
+                                src={mobileBg2}
+                                alt=""
+                                className="slider-img"
+                              />
+                            </div>
+                          </SplideSlide>
+                          <SplideSlide>
+                            <div className="img-wrapper2">
+                              <img
+                                src={mobileBg3}
+                                alt=""
+                                className="slider-img"
+                              />
+                            </div>
+                          </SplideSlide>
+                        </Splide>
+                      </motion.div>
+                      <div className="bg-slider">
+                        <Splide
+                          options={{
+                            rewind: true,
+                            height: "400px",
+                            direction: "ttb",
+                            arrows: false,
+                            pagination: false,
+                            perPage: 2,
+                            gap: "20px",
+                            drag: true,
+                            type: "loop",
+                          }}
+                          className="thumb-slider"
+                        >
+                          <SplideSlide>
+                            <div className="img-wrapper">
+                              <img src={thumb1} alt="" className="slider-img" />
+                            </div>
+                          </SplideSlide>
+                          <SplideSlide>
+                            <div className="img-wrapper">
+                              <img src={thumb2} alt="" className="slider-img" />
+                            </div>
+                          </SplideSlide>
+                          <SplideSlide>
+                            <div className="img-wrapper">
+                              <img src={thumb1} alt="" className="slider-img" />
+                            </div>
+                          </SplideSlide>
+                        </Splide>
+                      </div>
                     </div>
                   ) : (
                     ""
