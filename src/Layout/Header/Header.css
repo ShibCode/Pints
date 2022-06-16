@@ -63,8 +63,6 @@ nav {
 @media screen and (max-width: 550px) {
   header {
     height: 100px;
-    position: relative;
-    z-index: 99;
   }
   .nav-links {
     position: fixed;
@@ -84,8 +82,6 @@ nav {
   }
   .show-hammenu {
     right: 0;
-    position: relative;
-    z-index: 99;
   }
   .hammenu-btn {
     display: flex;
