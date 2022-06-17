@@ -119,8 +119,8 @@
   position: absolute;
   transform-origin: top left;
   width: 266px;
-  top: 5%;
-  left: 5%;
+  top: 29px;
+  left: 11%;
   z-index: 5;
 }
 .img-wrapper2 {
@@ -130,10 +130,7 @@
 }
 .img-wrapper {
   max-width: 100%;
-  padding: 10px;
   width: 100%;
-  background-color: white;
-  border-radius: 20px;
 }
 .slider-img {
   height: 100%;
@@ -141,7 +138,6 @@
   object-fit: contain;
 }
 .splide__slide {
-  width: 250px !important;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -236,6 +232,7 @@
     align-items: center;
   }
   .slider-img {
+    max-width: 230px;
     width: 45vw;
   }
   .main-slider {

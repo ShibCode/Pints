@@ -13,6 +13,8 @@ import mobileBg2 from "../../Assets/mobile-bg2.png";
 import mobileBg3 from "../../Assets/mobile-bg3.png";
 import thumb1 from "../../Assets/thumb1.png";
 import thumb2 from "../../Assets/thumb2.png";
+import thumb3 from "../../Assets/thumb3.png";
+import thumb4 from "../../Assets/thumb4.png";
 // import bag from "../../Assets/shopping-bag.png";
 import Features from "../../Components/Features/Features";
 import ThankYou from "../../Components/ThankYou/ThankYou";
@@ -58,14 +60,14 @@ export default function HomeIndex() {
       y: 0,
       transformPerspective: 500,
       transition: {
-        duration: 0.7,
+        duration: 0.3,
       },
     },
     animateFade2: {
       opacity: 1,
       transition: {
-        duration: 0.8,
-        delay: 1.1,
+        duration: 0.6,
+        delay: 0.9,
       },
     },
     animateImg: {
@@ -83,7 +85,7 @@ export default function HomeIndex() {
       y: 40,
       transformPerspective: 500,
       transition: {
-        duration: 0.8,
+        duration: 0.3,
       },
     },
   };
@@ -224,7 +226,8 @@ export default function HomeIndex() {
                             arrows: false,
                             pagination: false,
                             perPage: 1,
-                            type: "fade",
+                            perMove: 1,
+                            type: "loop",
                             width: "100%",
                             autoplay: "play",
                             interval: 5000,
@@ -278,11 +281,17 @@ export default function HomeIndex() {
                             perPage: 2,
                             perMove: 1,
                             gap: "20px",
+                            pauseOnHover: false,
                             drag: false,
                             type: "loop",
                           }}
                           className="thumb-slider"
                         >
+                          <SplideSlide>
+                            <div className="img-wrapper">
+                              <img src={thumb4} alt="" className="slider-img" />
+                            </div>
+                          </SplideSlide>
                           <SplideSlide>
                             <div className="img-wrapper">
                               <img src={thumb1} alt="" className="slider-img" />
@@ -295,7 +304,7 @@ export default function HomeIndex() {
                           </SplideSlide>
                           <SplideSlide>
                             <div className="img-wrapper">
-                              <img src={thumb1} alt="" className="slider-img" />
+                              <img src={thumb3} alt="" className="slider-img" />
                             </div>
                           </SplideSlide>
                         </Splide>
