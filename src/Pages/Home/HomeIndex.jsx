@@ -34,6 +34,7 @@ export default function HomeIndex() {
     if (showThankYou === true) {
       setTimeout(() => {
         setShowThankYou(false);
+        window.location.reload();
       }, 5000);
     }
   }, [showThankYou]);
@@ -44,7 +45,8 @@ export default function HomeIndex() {
     },
     initialFade2: {
       opacity: 0,
-      rotateX: "120deg",
+      rotateX: "90deg",
+      y: -20,
       transformPerspective: 500,
     },
     initialImg: {
@@ -53,6 +55,7 @@ export default function HomeIndex() {
     animateFade: {
       opacity: 1,
       rotateX: "0deg",
+      y: 0,
       transformPerspective: 500,
       transition: {
         duration: 0.7,
@@ -75,8 +78,12 @@ export default function HomeIndex() {
     },
     exitFade: {
       opacity: 0,
-      rotateX: "-120deg",
+      rotateX: "-90deg",
+      y: 40,
       transformPerspective: 500,
+      transition: {
+        duration: 0.8,
+      },
     },
   };
 
@@ -98,7 +105,10 @@ export default function HomeIndex() {
                         animate="animateFade"
                         exit="exitFade"
                         variants={firstVariants}
-                        style={{ display: "inline-block" }}
+                        style={{
+                          display: "inline-block",
+                          transformStyle: "preserve-3d",
+                        }}
                       >
                         Shopping
                       </motion.p>
@@ -110,7 +120,10 @@ export default function HomeIndex() {
                         animate="animateFade"
                         exit="exitFade"
                         variants={firstVariants}
-                        style={{ display: "inline-block" }}
+                        style={{
+                          display: "inline-block",
+                          transformStyle: "preserve-3d",
+                        }}
                       >
                         Coffee
                       </motion.p>
@@ -122,7 +135,10 @@ export default function HomeIndex() {
                         animate="animateFade"
                         exit="exitFade"
                         variants={firstVariants}
-                        style={{ display: "inline-block" }}
+                        style={{
+                          display: "inline-block",
+                          transformStyle: "preserve-3d",
+                        }}
                       >
                         Investing
                       </motion.p>
@@ -131,9 +147,10 @@ export default function HomeIndex() {
                   is... better with friends.
                 </h1>
                 <p className="home-para para montserrat">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque
+                  Whether you are out shopping, sipping coffee or making big
+                  life decisions, having a friend to do it is always better. Why
+                  not start your investing journey with your best buds on Pints
+                  today?
                 </p>
                 <div className="register-bar">
                   <button
