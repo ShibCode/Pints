@@ -48,13 +48,14 @@ nav {
   position: relative;
   z-index: 2;
 }
-.close-ham {
-  display: none;
-  font-size: 32px;
-}
 .open-ham {
   display: none;
   font-size: 32px;
+}
+.close-ham {
+  display: none;
+  font-size: 32px;
+  color: white;
 }
 .show-img {
   display: block;
@@ -66,7 +67,7 @@ nav {
   }
   .nav-links {
     position: fixed;
-    background-color: red;
+    background-color: #260b49;
     color: white;
     right: -100%;
     top: 0;

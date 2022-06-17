@@ -74,7 +74,7 @@ export default function HomeIndex() {
         duration: 0.7,
         type: "spring",
         stiffness: 100,
-        delay: 0.2,
+        delay: 0.4,
       },
     },
     exitFade: {
