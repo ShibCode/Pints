@@ -65,7 +65,7 @@ export default function HomeIndex() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        delay: 1,
+        delay: 1.1,
       },
     },
     animateImg: {
@@ -74,6 +74,7 @@ export default function HomeIndex() {
         duration: 0.7,
         type: "spring",
         stiffness: 100,
+        delay: 0.2,
       },
     },
     exitFade: {
