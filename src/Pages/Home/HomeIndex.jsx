@@ -42,30 +42,41 @@ export default function HomeIndex() {
     initialFade: {
       opacity: 0,
     },
+    initialFade2: {
+      opacity: 0,
+      rotateX: "120deg",
+      transformPerspective: 500,
+    },
     initialImg: {
       scale: 0,
     },
     animateFade: {
       opacity: 1,
+      rotateX: "0deg",
+      transformPerspective: 500,
       transition: {
-        duration: 1,
+        duration: 0.7,
       },
     },
     animateFade2: {
       opacity: 1,
       transition: {
-        duration: 2,
-        delay: 1.1,
+        duration: 0.8,
+        delay: 1,
       },
     },
     animateImg: {
       scale: 1,
       transition: {
-        duration: 1,
+        duration: 0.7,
+        type: "spring",
+        stiffness: 100,
       },
     },
     exitFade: {
       opacity: 0,
+      rotateX: "-120deg",
+      transformPerspective: 500,
     },
   };
 
@@ -81,37 +92,40 @@ export default function HomeIndex() {
                 <h1 className="home-heading heading poppins">
                   <AnimatePresence exitBeforeEnter>
                     {letter === "first" && (
-                      <motion.span
+                      <motion.p
                         key={letter}
-                        initial="initialFade"
+                        initial="initialFade2"
                         animate="animateFade"
                         exit="exitFade"
                         variants={firstVariants}
+                        style={{ display: "inline-block" }}
                       >
                         Shopping
-                      </motion.span>
+                      </motion.p>
                     )}
                     {letter === "second" && (
-                      <motion.span
+                      <motion.p
                         key={letter}
-                        initial="initialFade"
+                        initial="initialFade2"
                         animate="animateFade"
                         exit="exitFade"
                         variants={firstVariants}
+                        style={{ display: "inline-block" }}
                       >
                         Coffee
-                      </motion.span>
+                      </motion.p>
                     )}
                     {letter === "third" && (
-                      <motion.span
+                      <motion.p
                         key={letter}
-                        initial="initialFade"
+                        initial="initialFade2"
                         animate="animateFade"
                         exit="exitFade"
                         variants={firstVariants}
+                        style={{ display: "inline-block" }}
                       >
                         Investing
-                      </motion.span>
+                      </motion.p>
                     )}
                   </AnimatePresence>{" "}
                   is... better with friends.
