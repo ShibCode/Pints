@@ -289,11 +289,6 @@ export default function HomeIndex() {
                         >
                           <SplideSlide>
                             <div className="img-wrapper">
-                              <img src={thumb4} alt="" className="slider-img" />
-                            </div>
-                          </SplideSlide>
-                          <SplideSlide>
-                            <div className="img-wrapper">
                               <img src={thumb1} alt="" className="slider-img" />
                             </div>
                           </SplideSlide>
@@ -305,6 +300,11 @@ export default function HomeIndex() {
                           <SplideSlide>
                             <div className="img-wrapper">
                               <img src={thumb3} alt="" className="slider-img" />
+                            </div>
+                          </SplideSlide>
+                          <SplideSlide>
+                            <div className="img-wrapper">
+                              <img src={thumb4} alt="" className="slider-img" />
                             </div>
                           </SplideSlide>
                         </Splide>
