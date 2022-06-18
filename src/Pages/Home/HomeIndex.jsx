@@ -60,14 +60,15 @@ export default function HomeIndex() {
       y: 0,
       transformPerspective: 500,
       transition: {
-        duration: 0.3,
+        duration: 0.2,
+        delay: 0.1,
       },
     },
     animateFade2: {
       opacity: 1,
       transition: {
         duration: 0.6,
-        delay: 0.9,
+        delay: 0.6,
       },
     },
     animateImg: {
@@ -85,7 +86,7 @@ export default function HomeIndex() {
       y: 40,
       transformPerspective: 500,
       transition: {
-        duration: 0.3,
+        duration: 0.2,
       },
     },
   };
@@ -274,13 +275,13 @@ export default function HomeIndex() {
                           options={{
                             autoplay: "play",
                             interval: 5000,
-                            height: "450px",
+                            height: "340px",
                             direction: "ttb",
                             arrows: false,
                             pagination: false,
-                            perPage: 2,
+                            perPage: 1.5,
                             perMove: 1,
-                            gap: "20px",
+                            gap: "0px",
                             pauseOnHover: false,
                             drag: false,
                             type: "loop",
