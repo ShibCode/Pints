@@ -68,16 +68,21 @@
   color: #454b6f;
   text-align: center;
 }
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1260px) {
   .features-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
     place-items: center;
   }
-
+}
+@media screen and (max-width: 1000px) {
   .features-heading {
     font-size: clamp(28px, 6vw, 38px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .features-list {
+    grid-template-columns: 1fr;
   }
 }
