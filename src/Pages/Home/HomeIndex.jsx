@@ -21,7 +21,10 @@ import ThankYou from "../../Components/ThankYou/ThankYou";
 export default function HomeIndex() {
   const [showThankYou, setShowThankYou] = useState(false);
   const [letter, setLetter] = useState("first");
-
+  const [input, setInput] = useState("");
+  const inputHandler = (e) => {
+    setInput(e.target.value);
+  };
   useEffect(() => {
     setTimeout(() => {
       setLetter("second");
@@ -156,6 +159,12 @@ export default function HomeIndex() {
                   today?
                 </p>
                 <div className="register-bar">
+                  <input
+                    onChange={inputHandler}
+                    value={input}
+                    className="email-input"
+                    type="text"
+                  />
                   <button
                     className="register"
                     onClick={() => {
