@@ -83,7 +83,7 @@
 }
 .bag {
   position: absolute;
-  top: -27.5%;
+  top: -22.5%;
   right: 10px;
   width: 50%;
 }
@@ -225,9 +225,15 @@
     transform-origin: center;
     position: static;
   }
-  .bag,
+  .bag {
+    width: clamp(50px, 31.5vw, 150px);
+    top: -15%;
+    right: 10%;
+  }
   .cup {
-    display: none;
+    width: clamp(50px, 42vw, 200px);
+    bottom: -50px;
+    right: 0;
   }
 
   .img-wrapper2 {
@@ -247,9 +253,6 @@
   }
   .main-slider {
     position: static;
-  }
-  .home-content {
-    overflow-x: hidden;
   }
 }
 @media screen and (max-width: 375px) {

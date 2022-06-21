@@ -15,7 +15,6 @@ import thumb1 from "../../Assets/thumb1.png";
 import thumb2 from "../../Assets/thumb2.png";
 import thumb3 from "../../Assets/thumb3.png";
 import thumb4 from "../../Assets/thumb4.png";
-// import bag from "../../Assets/shopping-bag.png";
 import Features from "../../Components/Features/Features";
 import ThankYou from "../../Components/ThankYou/ThankYou";
 
